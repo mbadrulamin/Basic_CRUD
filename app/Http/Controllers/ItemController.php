@@ -13,7 +13,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        return inertia('Item/Index', [
+            'items' => auth()->user()->items
+        ]);
     }
 
     /**
